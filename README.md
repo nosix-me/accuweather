@@ -21,7 +21,7 @@ accuweather api url generate
 
 	accu, err := accuweather.SetKeys("apiKey","locationKey")
 
->获得所有配置信息
+>获得请求的url
 	
 	url,err := accu.GetCurrentConditionsUrl(params.ENVRIOMENT_DEVELOPMENT, params.VERSION_1, params.FORMAT_JSON, params.LANGUAGE_CHINESE, params.DETAILS_TRUE)
 
