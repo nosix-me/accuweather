@@ -7,8 +7,10 @@ accuweather api url generate
 使用accuweather生成访问url。
 
 ##安装方法
-	
-	go get github.com/nosix-me/accuweather
+
+	cd $GOPATH/src
+	git clone https://github.com/nosix-me/accuweather.git github.com/nosix-me/accuweather
+	go install github.com/nosix-me/accuweather
 
 ##使用方法
 
