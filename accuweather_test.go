@@ -1,35 +1,34 @@
 package accuweather
 
 import (
-	"accuweather/params"
-	"fmt"
+	"log"
 	"testing"
 )
 
 func Test_SetKeys(t *testing.T) {
 	accu, err := SetKeys("fdsaf", "locationKey")
 	if err != nil {
-		fmt.Println(err)
+		log.Println(err)
 	}
-	fmt.Println(accu.apiKey, accu.locationKey)
+	log.Println(accu.apiKey, accu.locationKey)
 	accu, err = SetKeys("apiKey", "")
 	if err != nil {
-		fmt.Println(err)
+		log.Println(err)
 	}
 	accu, err = SetKeys("", "locationKey")
 	if err != nil {
-		fmt.Println(err)
+		log.Println(err)
 	}
 	accu, err = SetKeys("", "")
 	if err != nil {
-		fmt.Println(err)
+		log.Println(err)
 	}
 }
 func Test_GetCurrentConditionsUrl(t *testing.T) {
 	accu, err := SetKeys("fdsaf", "locationKey")
 	if err != nil {
-		fmt.Println(err)
+		log.Println(err)
 	}
-	url, _ := accu.GetCurrentConditionsUrl(params.ENVRIOMENT_DEVELOPMENT, params.VERSION_1, params.FORMAT_JSON, params.LANGUAGE_CHINESE, params.DETAILS_TRUE)
-	fmt.Println(url)
+	url, _ := accu.GetCurrentConditionsUrl(ENVRIOMENT_DEVELOPMENT, VERSION_1, FORMAT_JSON, LANGUAGE_CHINESE, DETAILS_TRUE)
+	log.Println(url)
 }
